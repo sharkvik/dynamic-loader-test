@@ -1,0 +1,13 @@
+@background-color: yellow;
+.one{
+  background-color: @background-color;
+}
+.two{
+  @background-color: red;
+  .three{
+    background-color: @background-color;
+  }
+  .one{
+    background-color: @background-color;
+  }
+}
