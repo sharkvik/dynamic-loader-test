@@ -12,10 +12,10 @@ import * as _ from 'lodash';
 
 @Component({
   selector: 'nvm-loader',
-  templateUrl: './loader.component.html',
-  styleUrls: ['./loader.component.less']
+  template: `<ng-container #container></ng-container>`,
+  styles: []
 })
-export class LoaderComponent implements OnInit {
+export class NvmLoaderComponent implements OnInit {
   @Input() route: string;
 
   @ViewChild('container', { read: ViewContainerRef }) container: ViewContainerRef;

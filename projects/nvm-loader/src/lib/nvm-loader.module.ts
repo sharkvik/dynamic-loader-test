@@ -1,19 +1,20 @@
+
 import { NgModule, SystemJsNgModuleLoader, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoaderComponent } from './loader/loader.component';
 import { provideRoutes, Route } from '@angular/router';
+import { NvmLoaderComponent } from './nvm-loader.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  exports: [LoaderComponent],
-  declarations: [LoaderComponent]
+  declarations: [NvmLoaderComponent],
+  exports: [NvmLoaderComponent]
 })
-export class LoaderModule {
+export class NvmLoaderModule {
   static forRoot(lazyRoutes: Route[]): ModuleWithProviders {
     return {
-      ngModule: LoaderModule,
+      ngModule: NvmLoaderModule,
       providers: [
         SystemJsNgModuleLoader,
         provideRoutes(lazyRoutes),
@@ -21,3 +22,4 @@ export class LoaderModule {
     };
   }
 }
+

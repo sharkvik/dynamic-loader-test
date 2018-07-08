@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoaderModule } from './loader/loader.module';
 import { Constants } from './shared/constants';
+import { NvmLoaderModule } from 'nvm-loader';
 
 
 
@@ -15,7 +15,7 @@ import { Constants } from './shared/constants';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LoaderModule.forRoot(Constants.lazyLoadablePaths)
+    NvmLoaderModule.forRoot(Constants.lazyLoadablePaths)
   ],
   bootstrap: [AppComponent]
 })

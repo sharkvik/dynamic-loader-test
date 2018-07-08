@@ -144,6 +144,46 @@
           }
         }
       }
+    },
+    "nvm-loader": {
+      "root": "projects/nvm-loader",
+      "sourceRoot": "projects/nvm-loader/src",
+      "projectType": "library",
+      "prefix": "nvm",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/nvm-loader/tsconfig.lib.json",
+            "project": "projects/nvm-loader/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/nvm-loader/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nvm-loader/src/test.ts",
+            "tsConfig": "projects/nvm-loader/tsconfig.spec.json",
+            "karmaConfig": "projects/nvm-loader/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/nvm-loader/tsconfig.lib.json",
+              "projects/nvm-loader/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "app-test"

@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "nvm-loader": [
+        "dist/nvm-loader"
+      ],
+      "nvm-loader/*": [
+        "dist/nvm-loader/*"
+      ]
+    }
   }
 }
