@@ -21,5 +21,14 @@ export class NvmLoaderModule {
       ]
     };
   }
+  static forChild(lazyRoutes: Route[]): ModuleWithProviders {
+    return {
+      ngModule: NvmLoaderModule,
+      providers: [
+        SystemJsNgModuleLoader,
+        provideRoutes(lazyRoutes),
+      ]
+    };
+  }
 }
 

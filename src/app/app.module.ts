@@ -15,7 +15,7 @@ import { NvmLoaderModule } from 'nvm-loader';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NvmLoaderModule.forRoot(Constants.lazyLoadablePaths)
+    NvmLoaderModule.forChild(Constants.lazyLoadablePaths)
   ],
   bootstrap: [AppComponent]
 })
