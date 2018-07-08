@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Constants } from './shared/constants';
 
 @Component({
   selector: 'nvm-root',
@@ -8,4 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'nvm';
   public displayLazy = false;
+  public route: string;
+  constructor() {
+    this.route = Constants.lazyLoadablePaths[0].loadChildren;
+  }
 }

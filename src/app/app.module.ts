@@ -1,27 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, NgModuleFactoryLoader, SystemJsNgModuleLoader } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { provideRoutes } from '@angular/router';
-import { DynamicComponent } from './dynamic/dynamic.component';
+import { LoaderModule } from './loader/loader.module';
+import { Constants } from './shared/constants';
 
-const lazyLoadablePaths = [
-  { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule' }
-];
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DynamicComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [
-    SystemJsNgModuleLoader,
-    provideRoutes(lazyLoadablePaths),
+    AppRoutingModule,
+    LoaderModule.forRoot(Constants.lazyLoadablePaths)
   ],
   bootstrap: [AppComponent]
 })

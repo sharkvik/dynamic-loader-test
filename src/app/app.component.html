@@ -22,6 +22,6 @@
   <div class="one">0</div>
 </div>
 <ng-container *ngIf="displayLazy">
-  <nvm-dynamic></nvm-dynamic>
+  <nvm-loader [route]="route"></nvm-loader>
 </ng-container>
 <button (click)="displayLazy = !displayLazy">toggle lazy</button>
