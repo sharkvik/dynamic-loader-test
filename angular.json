@@ -49,7 +49,7 @@
               "src/styles.less"
             ],
             "scripts": [],
-            "lazyModules": [ "app/admin/admin.module" ]
+            "lazyModules": [ "src/app/lazy/lazy.module" ]
           },
           "configurations": {
             "production": {
