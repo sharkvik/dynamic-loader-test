@@ -22,7 +22,7 @@ export class NvmLoaderComponent implements OnInit {
   constructor(private loader: SystemJsNgModuleLoader, private inj: Injector) { }
 
   ngOnInit() {
-    if (!!this.route || !this.route.length) {
+    if (!this.route || !this.route.length) {
       return;
     }
     this.loader.load(this.route).then((moduleFactory: NgModuleFactory<any>) => {
