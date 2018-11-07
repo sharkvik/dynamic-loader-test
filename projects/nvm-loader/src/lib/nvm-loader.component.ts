@@ -8,7 +8,6 @@ import {
   NgModuleFactory,
   Input
 } from '@angular/core';
-import * as _ from 'lodash';
 
 @Component({
   selector: 'nvm-loader',
@@ -23,7 +22,7 @@ export class NvmLoaderComponent implements OnInit {
   constructor(private loader: SystemJsNgModuleLoader, private inj: Injector) { }
 
   ngOnInit() {
-    if (_.isEmpty(this.route)) {
+    if (!!this.route || !this.route.length) {
       return;
     }
     this.loader.load(this.route).then((moduleFactory: NgModuleFactory<any>) => {
