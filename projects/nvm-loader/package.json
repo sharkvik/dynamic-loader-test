@@ -1,6 +1,16 @@
 {
   "name": "nvm-loader",
-  "version": "0.0.6-1",
+  "version": "0.0.10",
+  "description": "lazy loading modules without router",
+  "homepage": "https://github.com/shark_vik",
+  "bugs": {
+    "email": "shark_vik@inbox.ru"
+  },
+  "author": {
+    "name": "Viktor",
+    "email": "shark_vik@inbox.ru"
+  },
+  "license": "UNLICENSED",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
