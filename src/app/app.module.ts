@@ -6,17 +6,13 @@ import { AppComponent } from './app.component';
 import { Constants } from './shared/constants';
 import { NvmLoaderModule } from 'nvm-loader';
 
-
-
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NvmLoaderModule.forChild(Constants.lazyLoadablePaths)
-  ],
-  bootstrap: [AppComponent]
+	declarations: [AppComponent],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		NvmLoaderModule.forChild(Constants.lazyLoadablePaths)
+	],
+	bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
