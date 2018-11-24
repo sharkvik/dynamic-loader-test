@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Constants } from './shared/constants';
+import { SharedService } from './shared.service';
 
 @Component({
 	selector: 'nvm-root',
@@ -10,7 +11,10 @@ export class AppComponent {
 	title = 'nvm';
 	public displayLazy = false;
 	public route: string;
-	constructor() {
+	public get counter() {
+		return this._sharedService.counter;
+	}
+	constructor(private _sharedService: SharedService) {
 		this.route = Constants.lazyLoadablePaths[0].loadChildren;
 	}
 }
