@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const childProcessExec = require('child_process').exec;
+const util = require('util');
+
+const exec = util.promisify(childProcessExec);
+
+checkCommitMessage();
+
+async function checkCommitMessage(){
+  console.log('---- custom message ----');
+  process.exit(0);
+}
